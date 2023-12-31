@@ -9,10 +9,10 @@
         <% authors.forEach(element=> { %>
             <% if(element.id===book.author) { %>
                 <option selected label="<%= element.name %>" value="<%= element.id %>">
-                    <% } else { %>
+            <% } else { %>
                 <option label="<%= element.name %>" value="<%= element.id %>">
-                    <% } %>
-                        <% }) %>
+            <% } %>
+        <% }) %>
     </select>
 </div>
 
@@ -34,5 +34,5 @@
 
 <div>
     <label>Description</label>
-    <textarea name="description"><% book.description %></textarea>
+    <textarea name="description"><%= book.description %></textarea>
 </div>

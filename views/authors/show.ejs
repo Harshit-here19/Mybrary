@@ -12,6 +12,8 @@
     <h2>Books By Author</h2>
     <br>
     <% book.forEach(element => {  %>
-        <img height="200" width="150" src="<%= element.coverImagePath %>" alt="<%= element.title %>">
+        <a href="/books/<%= element.id %>" target="_blank">
+            <img height="200" width="150" src="<%= element.coverImagePath %>" alt="<%= element.title %>">
+        </a>
     <% }); %>    
 <% } %>

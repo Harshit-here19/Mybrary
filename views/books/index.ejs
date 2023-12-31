@@ -21,12 +21,8 @@
 
 <div>
 <% books.forEach(element=>{ %>
-    <img height="200" width="150" src="<%= element.coverImagePath %>" alt="">
-    <div><%= element.title %></div>
-    <div><%= element.author %></div>
-    <div><%= element.publishDate %></div>
-    <div><%= element.description %></div>
-    <div><%= element.pageCount %></div>
-    <div><%= element.coverImageName %></div>
+    <a href="/books/<%= element.id %>">
+        <img height="200" width="150" src="<%= element.coverImagePath %>">
+    </a>
 <% }) %>
 </div>
