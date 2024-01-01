@@ -1,0 +1,48 @@
+:root {
+  --nav-title-font-size: 3.2rem;
+  --nav-title-font-weight: bold;
+  --nav-link-font-weight: 400;
+  --nav-title-font: "Rubik Doodle Shadow";
+}
+
+.header-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.header-title {
+  text-decoration: none;
+  font-size: var(--nav-title-font-size);
+  font-weight: var(--nav-title-font-weight);
+  color: var(--color-text-light);
+  font-family: var(--nav-title-font), Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header-title:hover,
+.header-nav li a:hover {
+  color: #fff;
+}
+
+.header-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.header-nav li a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-weight: var(--nav-link-font-weight);
+  padding: 1rem;
+}
+
+.page-header {
+  font-size: 2rem;
+  font-weight: 500;
+}

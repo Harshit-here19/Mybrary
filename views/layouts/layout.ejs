@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mybrary</title>
-    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet" />
-    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/filepond@^4/dist/filepond.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
 
-</head>
-
-<body>
-    <%- include('../partials/header.ejs') %>
-    <%- include('../partials/errorMessage.ejs') %>
-    <%- body %>
+  <body>
+    <div class="container">
+      <%- include('../partials/header.ejs') %>
+      <div class="inner-container">
+        <%- include('../partials/errorMessage.ejs') %> <%- body %>
+      </div>
+    </div>
     <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
     <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
     <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
     <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
-</body>
+  </body>
 
-    <script>
-        FilePond.registerPlugin(
-            FilePondPluginImagePreview,
-            FilePondPluginImageResize,
-            FilePondPluginFileEncode,
-        )
+  <script>
+    FilePond.registerPlugin(
+      FilePondPluginImagePreview,
+      FilePondPluginImageResize,
+      FilePondPluginFileEncode
+    );
 
-        FilePond.setOptions({
-            stylePanelAspectRatio: 150 / 100,
-            imageResizeTargetWidth: 150,
-            imageResizeTargetHeight: 100
-        })
+    FilePond.setOptions({
+      stylePanelAspectRatio: 150 / 100,
+      imageResizeTargetWidth: 150,
+      imageResizeTargetHeight: 100,
+    });
 
-        FilePond.parse(document.body);
-    </script>
-
+    FilePond.parse(document.body);
+  </script>
 </html>

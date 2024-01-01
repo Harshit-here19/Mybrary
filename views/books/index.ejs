@@ -1,28 +1,41 @@
-<h2>Search Books</h2>
+<h2 class="page-header">Search Books</h2>
 
 <form action="/books" method="GET">
-    <div>
-        <label>Title</label>
-        <input type="text" name="title" value="<%= searchOptions.title %>" autocomplete="off">
-    </div>
-    <div>
-        <label>Published After</label>
-        <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
-    </div>
-    <div>
-        <label>Published Before</label>
-        <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
-    </div>
-    <button type="submit">Search</button>
+  <div>
+    <label>Title</label>
+    <input
+      type="text"
+      name="title"
+      value="<%= searchOptions.title %>"
+      autocomplete="off"
+    />
+  </div>
+  <div>
+    <label>Published After</label>
+    <input
+      type="date"
+      name="publishedAfter"
+      value="<%= searchOptions.publishedAfter %>"
+    />
+  </div>
+  <div>
+    <label>Published Before</label>
+    <input
+      type="date"
+      name="publishedBefore"
+      value="<%= searchOptions.publishedBefore %>"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">Search</button>
 </form>
 
-<br>
-<hr>
+<br />
+<hr />
 
 <div>
-<% books.forEach(element=>{ %>
-    <a href="/books/<%= element.id %>">
-        <img height="200" width="150" src="<%= element.coverImagePath %>">
-    </a>
-<% }) %>
+  <% books.forEach(element=>{ %>
+  <a href="/books/<%= element.id %>">
+    <img height="200" width="150" src="<%= element.coverImagePath %>" />
+  </a>
+  <% }) %>
 </div>
